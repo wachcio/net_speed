@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/wachcio/net_speed/issues"
   },
-  "homepage": "https://github.com/wachcio/net_speed#readme"
+  "homepage": "https://github.com/wachcio/net_speed#readme",
+  "type": "module"
 }

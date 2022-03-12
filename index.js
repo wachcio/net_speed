@@ -1,14 +1,25 @@
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+// const util = require('util');
+import util from 'util';
+import { exec as execute } from 'child_process';
+const exec = util.promisify(execute);
 
-const command = `speedtest -f json -u Mibps`;
+import { promises as fs } from 'fs';
+
+import { fileURLToPath } from 'url';
+import path, { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const logsFile = join(__dirname, 'logs', 'log.txt');
+
+const command = `speedtest -f json`;
 
 async function measureSpeed() {
     const { stdout, stderr } = await exec(command);
     try {
         const result = {};
         const json = JSON.parse(stdout);
-        // console.log(json);
 
         result.timestamp = json.timestamp;
         result.result = `Data pomiaru: ${result.timestamp}; `;
@@ -24,7 +35,7 @@ async function measureSpeed() {
         result.result += `Pakiety stracone: ${result.packetLoss}%; `;
         result.isp = json.isp;
         result.result += `ISP: ${result.isp}; `;
-        result.server = `${json.server.name}-${json.server.location}`;
+        result.server = `${json.server.name} - ${json.server.location}`;
         result.result += `Serwer pomiaru: ${result.server}; `;
         result.url = json.result.url;
         result.result += `URL: ${result.url}`;
@@ -37,5 +48,12 @@ async function measureSpeed() {
 
 (async () => {
     const speed = await measureSpeed();
+    try {
+        await fs.appendFile(logsFile, speed.result + '\r\n', 'utf8');
+    } catch {
+        console.error('cannot access');
+        await fs.mkdir(path.dirname(logsFile));
+        await fs.appendFile(logsFile, speed.result + '\r\n', 'utf8');
+    }
     console.log(speed.result);
 })();
