@@ -1,7 +1,7 @@
 # net_speed
 
 Mały skrypt służący do pomiaru prędkości internetu i zapisywaniu wyników do pliku. Korzysta z Speedtest.net CLI (https://www.speedtest.net/pl/apps/cli) który trzeba wcześniej zainstalować w komputerze.
-Drugim elementem który jest niezbędny to NodeJS które można zainstalować ze strony (https://nodejs.org/en/) lub zainstalować manager wersji NodeJS np. NVM (https://github.com/nvm-sh/nvm) Oba komponenty są wieloplatformowe.
+Drugim elementem który jest niezbędny to NodeJS które można zainstalować ze strony (https://nodejs.org/en/) lub zainstalować manager wersji NodeJS np. NVM (https://github.com/nvm-sh/nvm) Oba komponenty są wieloplatformowe. W katalogu ze skryptem musi być również plik _package.json_ a w nim wpis `"type": "module"`
 
 #
 
