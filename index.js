@@ -1,4 +1,5 @@
-// const util = require('util');
+const COMMAND = `speedtest`;
+
 import util from 'util';
 import { exec as execute } from 'child_process';
 const exec = util.promisify(execute);
@@ -13,10 +14,8 @@ const __dirname = dirname(__filename);
 
 const logsFile = join(__dirname, 'logs', 'log.txt');
 
-const command = `speedtest -f json`;
-
 async function measureSpeed() {
-    const { stdout, stderr } = await exec(command);
+    const { stdout, stderr } = await exec(COMMAND + ' -f json');
     try {
         const result = {};
         const json = JSON.parse(stdout);
