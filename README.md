@@ -19,4 +19,4 @@ Przykładowy wpis może wyglądać tak:
 
 #
 
-Oznacza, że skrypt wykopna się za dziesięc minut każdej godziny codziennie.
+Oznacza, że skrypt wykona się za dziesięc minut każdej godziny codziennie.
