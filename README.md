@@ -10,7 +10,7 @@ Jeśli jest taka potrzeba można dopisać skrypt do harmonogramu systemu operacy
 
 #
 
-W terminalu wpisz `crontab -e`. Na końcu pliku dopisz jak często ma być wykonane zadanie i co ma się wykonać. Częstotliwość uruchamiania zadania opisano np tutaj (https://ai.ia.agh.edu.pl/_media/pl:dydaktyka:unix:gjn-cron.pdf) lub (http://pl.docs.pld-linux.org/uslugi_cron.html) Pomocny może być również generator CRON (https://crontab.guru/) Aby uzyskać ścieżkę do NodeJS wpisz `which node` Jeśli system nie zrobi automatycznie aliasu do skryptu sepedtest.net będziesz musiał również wiedzieć gdzie on się znajduje i wpisać go w pierwszej linijce w pliku index.js.
+W terminalu wpisz `crontab -e`. Na końcu pliku dopisz jak często ma być wykonane zadanie i co ma się wykonać. Częstotliwość uruchamiania zadania opisano np tutaj (https://ai.ia.agh.edu.pl/_media/pl:dydaktyka:unix:gjn-cron.pdf) lub (http://pl.docs.pld-linux.org/uslugi_cron.html) Pomocny może być również generator CRON (https://crontab.guru/) Aby uzyskać ścieżkę do NodeJS wpisz `which node` Jeśli system nie zrobi automatycznie aliasu do skryptu speedtest.net będziesz musiał również wiedzieć gdzie on się znajduje i wpisać go w pierwszej linijce w pliku index.js.
 
 #
 
