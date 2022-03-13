@@ -31,7 +31,8 @@ async function measureSpeed() {
         result.result += `Ping: ${result.ping}ms; `;
         result.jitter = json.ping.jitter.toFixed(2);
         result.result += `Jitter: ${result.jitter}ms; `;
-        result.packetLoss = json.packetLoss;
+        result.packetLoss =
+            json.packetLoss > 0 ? json.packetLoss.toFixed(2) : json.packetLoss;
         result.result += `Pakiety stracone: ${result.packetLoss}%; `;
         result.isp = json.isp;
         result.result += `ISP: ${result.isp}; `;
