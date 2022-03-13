@@ -15,7 +15,7 @@ W terminalu wpisz `crontab -e`. Na końcu pliku dopisz jak często ma być wykon
 #
 
 Przykładowy wpis może wyglądać tak:
-`50 \* \* \* \* /home/pi/.nvm/versions/node/v16.14.0/bin/node /home/pi/net-speed/index.js`
+`50 * * * * /home/pi/.nvm/versions/node/v16.14.0/bin/node /home/pi/net-speed/index.js`
 
 #
 
