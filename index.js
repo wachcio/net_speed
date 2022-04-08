@@ -20,8 +20,8 @@ async function measureSpeed() {
         const result = {};
         const json = JSON.parse(stdout);
 
-        result.timestamp = json.timestamp;
-        result.result = `Data pomiaru: ${result.timestamp}; `;
+        // result.timestamp = json.timestamp;
+        result.result = `Data pomiaru: ${new Date().toLocaleString()}; `;
         result.download = (json.download.bandwidth / 125000).toFixed(2);
         result.result += `Download: ${result.download}Mbps; `;
         result.upload = (json.upload.bandwidth / 125000).toFixed(2);
